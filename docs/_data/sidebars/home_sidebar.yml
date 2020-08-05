@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: module name here
+      title: 'My module name #1'
       url: /core
     output: web
     title: titanic_nbdev
