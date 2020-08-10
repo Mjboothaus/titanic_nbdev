@@ -1,0 +1,154 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "titanic3.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_equal",
+      "kwargs": {
+        "value": 1309
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "kwargs": {
+        "value": 14
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "pclass",
+          "survived",
+          "name",
+          "sex",
+          "age",
+          "sibsp",
+          "parch",
+          "ticket",
+          "fare",
+          "cabin",
+          "embarked",
+          "boat",
+          "body",
+          "home.dest"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pclass"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "kwargs": {
+        "column": "pclass",
+        "value_set": [
+          1,
+          2,
+          3
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "name"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "name",
+        "min_value": 1
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "data_asset_name": "titanic3",
+        "datasource": "Titanic",
+        "path": "/Users/mjboothaus/Library/Mobile Documents/com~apple~CloudDocs/Code/Github/titanic-nbdev/great_expectations/../data/titanic3.csv"
+      },
+      "created_at": 1596629008.3730078,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_kwargs": {
+          "data_asset_name": "titanic3",
+          "datasource": "Titanic",
+          "path": "/Users/mjboothaus/Library/Mobile Documents/com~apple~CloudDocs/Code/Github/titanic-nbdev/great_expectations/../data/titanic3.csv"
+        },
+        "batch_markers": {
+          "ge_load_time": "20200805T120328.194561Z",
+          "pandas_data_fingerprint": "9027805b70e53d3566fe5270236a5c10"
+        },
+        "batch_parameters": null,
+        "citation_date": "20200805T120328.395074Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      "age": {
+        "description": ""
+      },
+      "boat": {
+        "description": ""
+      },
+      "body": {
+        "description": ""
+      },
+      "cabin": {
+        "description": ""
+      },
+      "embarked": {
+        "description": ""
+      },
+      "fare": {
+        "description": ""
+      },
+      "home.dest": {
+        "description": ""
+      },
+      "name": {
+        "description": ""
+      },
+      "parch": {
+        "description": ""
+      },
+      "pclass": {
+        "description": ""
+      },
+      "sex": {
+        "description": ""
+      },
+      "sibsp": {
+        "description": ""
+      },
+      "survived": {
+        "description": ""
+      },
+      "ticket": {
+        "description": ""
+      }
+    },
+    "great_expectations.__version__": "0.11.9",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}
