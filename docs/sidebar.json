@@ -1,6 +1,8 @@
 {
   "titanic_nbdev": {
     "Overview": "/",
-    "My module name #1": "/core"
+    "My module name #1": "/core",
+    "Geo-location model": "/geo",
+    "Titanic Streamlit App": "/app"
   }
 }

@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"my_core_helper_function": "00_core.ipynb",
+         "lookup_lat_lon_from_placename": "01_geo.ipynb",
          "TITANIC_DATA_FILE": "88_app.ipynb",
          "AUTHOR_INFO": "88_app.ipynb",
          "APP_NAME": "88_app.ipynb",
@@ -12,6 +13,7 @@ index = {"my_core_helper_function": "00_core.ipynb",
          "sb": "88_app.ipynb"}
 
 modules = ["core.py",
+           "geo.py",
            "app.py"]
 
 doc_url = "https://mjboothaus.github.io/titanic_nbdev/"

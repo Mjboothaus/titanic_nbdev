@@ -12,6 +12,12 @@ entries:
     - output: web,pdf
       title: 'My module name #1'
       url: /core
+    - output: web,pdf
+      title: Geo-location model
+      url: /geo
+    - output: web,pdf
+      title: Titanic Streamlit App
+      url: /app
     output: web
     title: titanic_nbdev
   output: web

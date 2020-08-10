@@ -18,6 +18,8 @@ import numpy as np
 import pandas as pd
 import datetime as dt
 import streamlit as st
+from streamlit_folium import folium_static
+import folium
 
 from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
@@ -30,7 +32,7 @@ APP_NAME = 'Titanic Data Explorer - PP'
 # Cell
 class SideBar:
     datasource = 'DATA: [Titanic Dataset (known errors)](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3info.txt)'
-    datasize = 0   # look to calculate this (in MB?)
+    datasize = 0   # look to calculate this (in MB?) - TEST: Comment change
     author = AUTHOR_INFO
     title = 'Data details...'
     data_local = False
@@ -51,6 +53,20 @@ def create_sidebar():
 
 def create_mainscreen(df, pr, APP_NAME):
     st.title(APP_NAME)
+
+    # Folium mapping example: center on Sydney Opera House
+    m = folium.Map(location=[-33.85719805, 151.21512338473752], zoom_start=15)
+
+    # add marker for Opera House
+    tooltip = "Sydney Opera House"
+    folium.Marker(
+        [-33.85719805, 151.21512338473752], popup="Sydney Opera House", tooltip=tooltip
+    ).add_to(m)
+
+    # call to render Folium map in Streamlit
+    folium_static(m)
+
+    # Dataframe / Profiling example
     st.write(df)
     st.header('Data Profile:')
     st_profile_report(pr)
